@@ -1,6 +1,6 @@
 
 couleurs_valides = ["TREFLE", "CARREAU", "COEUR", "PIQUE"]
-valeurs_valides = [ str(valeur) for valeur in range(1, 11) ] + ["VALET", "DAME", "ROI"]
+valeurs_valides = ["AS"] + [ str(valeur) for valeur in range(2, 11) ] + ["VALET", "DAME", "ROI"]
 
 class Carte:
     """Represente une carte à jouer
@@ -11,8 +11,9 @@ class Carte:
         self.couleur = couleur
 
     def points(self) -> int:
-        return couleurs_valides.index(self.valeur) + 1
+        return valeurs_valides.index(self.valeur) + 1
 
 
 if __name__ == "__main__":
-    pass
+    carte = Carte("1", "TREFLE")
+    print(valeurs_valides)
